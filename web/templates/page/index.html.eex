@@ -1,0 +1,65 @@
+<center>
+  <span class= "flash-message">
+    <%= get_flash(@conn, :info) %>
+  </span>
+</center>
+<div class="banner center">
+    <span>We believe in</span>
+    <h1>Design + Technology</h1>
+    <h2>They both bring great improvements to humanity</h2>
+  </div>
+  <div class="design center">
+    <div class="design-section section">
+      <h2>We design and develop blazing fast web <br> and mobile applications with Elixir &amp; Swift, <br>for big companies or startups.</h2>
+      <ul class="clearfix">
+        <li><img src="images/swift-logo.png" width="206" alt="Swift Logo"></li>
+        <li><img src="images/elixir-logo.png" width="194" alt="Elixir Logo"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="openings center">
+    <div class="section">
+      <p>We are always interviewing designers and developers.</p>
+      <p>Current openings.</p>
+      <button type="button" class="btn apply">APPLY</button>
+      <div class="application contact secret">
+        <%= form_tag("/apply", method: :post) do %>
+            <%= text_input :application_form, :name, placeholder: "Name", required: true %>
+            <%= text_input :application_form, :email, placeholder: "Email", required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", title: "Valid email address." %>
+            <%= textarea :application_form, :message, placeholder: "A brief description about yourself and links to your awesome work (Github, Dribble...)", required: true %>
+            <%= submit "SEND" %>
+
+          <% end %>
+        </div>
+    </div>
+  </div>
+  <div class="events center">
+    <div class="section">
+      <h2>EVENTS</h2>
+      <div class="clearfix">
+        <a href="http://www.erlang-factory.com/mexico2015" target="_blank" class="loc">Erlang Factory Mexico City</a>
+        <span class="date"><small>DATE:</small> 0ct 10, 2015</span>
+        <center><img class="event-image" src="images/erlang-factory.png" width="250" alt="logo"></center>
+      </div>
+    </div>
+
+  </div>
+  <div class="contact-wrap">
+    <div class="section clearfix">
+      <div class="left contact">
+        <h2>CONTACT US</h2>
+
+        <%= form_tag("/contact", method: :post) do %>
+          <%= text_input :contact_form, :name, placeholder: "Name", required: true %>
+          <%= text_input :contact_form, :email, placeholder: "Email", required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", title: "Valid email address." %>
+          <%= textarea :contact_form, :message, placeholder: "Message", required: true %>
+          <%= submit "SEND" %>
+
+        <% end %>
+      </div>
+      <div class="right email">
+        <p><a href="mailto:info@starbeast.com" class="mail">info@starbeast.com</a></p>
+        <p><a href="https://twitter.com/starbeastech" target="_blank" class="tweet">@starbeastech</a></p>
+      </div>
+    </div>
+  </div>

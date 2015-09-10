@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="en-US"><!--<![endif]-->
+<head>
+<meta charset = "utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,800,700,600' rel='stylesheet' type='text/css'>
+<link href="<%= static_path(@conn, "/css/app.css") %>" rel="stylesheet" media="all" />
+
+<!--[if lt IE 9]> <script src="js/html5.js" ></script> <![endif]-->
+<meta name="viewport" content="width=device-width" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<!-- 16x16 or 32x32 pixels -->
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<!-- 57x57 or 114x114 pixles -->
+</head>
+
+<body dir="ltr">
+  <header class="header">
+    <div class="section head-wrap clearfix">
+      <a href="#" class="logo left"><img src="images/logo.png" width="200" alt="logo"></a>
+      <nav class="nav right">
+        <ul class="clearfix">
+          <li class="services-scroll"><a>SERVICES</a></li>
+          <!--<li><a href="#">BLOG</a></li>-->
+          <li class="jobs-scroll"><a>JOBS</a></li>
+          <li class="events-scroll"><a>EVENTS</a></li>
+          <li class="active contact-scroll"><a>CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <%= @inner %>
+
+  <footer class="footer center">
+    <p>&copy; 2015 STARBEAST, LLC All rights reseved.</p>
+  </footer>
+<script src="<%= static_path(@conn, "/js/app.js") %>" type="text/javascript"></script> 
+
+</body>
+</html>

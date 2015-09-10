@@ -1,0 +1,657 @@
+/* CSS Document */
+
+/* TOC 
+ * RESET STYLES
+ * FONT FACE (IF USED)
+ * HTML
+ * BODY
+ * HEADER
+ * NAVIGATION
+ * PAGE
+ * FOOTER
+ * FORMS
+ * PLUGINS
+ * PRINT STYLES
+ * MEDIA QUERIES
+---------------------------------------------------------------------------*/
+
+
+/* RESET STYLES
+---------------------------------------------------------------------------*/
+
+html {
+	overflow-y: scroll;
+}
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.231; /*1.231 will be multiplied by current font size and make 16px line height */
+	min-height:100%;
+	font-family:'Raleway', Futura, sans-serif;
+	font-weight: 600;
+	color: #222;
+}
+
+.flash-message {
+
+	/* background-color: #535354; */
+	font-size: 15px;
+	color: black;
+	vertical-align: super;
+	padding: 2px;
+}
+
+.left{ float:left; }
+.right{ float:right; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+button, input, select, textarea {
+	font-family: sans-serif; /*Probably Helvetica for Linux/Mac Systems And Arial for Windows PC*/
+	color: #222;
+} 
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after { /* Safari Reset as Safari does not recognise quotes property */
+	content: '';
+	content: none;
+} 
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000; 
+	cursor: help;
+}
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+p {
+	margin:0;
+	padding:0;
+}
+a {
+	margin:0;
+	padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+a:hover, a:active {
+	outline: 0;
+}
+a img {
+	border:0 none;
+}
+del {
+	text-decoration: line-through;
+	color: #ed1c24;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+small {
+	font-size: 85%;
+}
+.clickable, label, input[type=button], input[type=submit], button {
+	cursor: pointer; /* hand cursor on clickable elements */
+}
+button, input, select, textarea {
+	margin: 0; /* Webkit browsers add a 2px margin outside the chrome of form elements */
+}
+button { /* make buttons play nice in IE */
+	width: auto;
+	overflow: visible;
+}
+table {
+	font-size: inherit;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: bold;
+	vertical-align: middle;
+}
+td {
+	font-weight: normal;
+}
+td, td img {
+	vertical-align: middle;
+}
+.clearfix:before, .clearfix:after {
+	content:"";
+	display:table;
+}
+.clearfix:after {
+	clear:both;
+}
+.clearfix {
+	zoom:1;
+}
+.center{
+	text-align: center;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+ul, ol {
+	margin: 0;
+	padding:0;
+	list-style-type:none;
+}
+a{ text-decoration:none; }
+nav ul, nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+}
+h1 {
+	font-size:42px;
+}
+h2 {
+	font-size:34px;
+}
+h3 {
+	font-size:28px;
+}
+h4 {
+	font-size:24px;
+}
+h5 {
+	font-size:22px;
+}
+h6 {
+	font-size:18px;
+}
+*:focus {
+    outline: 0;
+}
+/* FONT FACE (IF USED)
+---------------------------------------------------------------------------
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('/../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family:'Raleway-Thin';
+	src: url('../fonts/Raleway-Thin_gdi.eot');
+	src: url('../fonts/Raleway-Thin_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Thin_gdi.woff') format('woff'),
+		url('../fonts/Raleway-Thin_gdi.ttf') format('truetype'),
+		url('../fonts/Raleway-Thin_gdi.svg#Raleway-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family:'Raleway-SemiBold';
+	src: url('../fonts/Raleway-SemiBold_gdi.eot');
+	src: url('../fonts/Raleway-SemiBold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-SemiBold_gdi.woff') format('woff'),
+		url('../fonts/Raleway-SemiBold_gdi.ttf') format('truetype'),
+		url('../fonts/Raleway-SemiBold_gdi.svg#Raleway-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family:'Raleway-ExtraBold';
+	src: url('../fonts/Raleway-ExtraBold_gdi.eot');
+	src: url('../fonts/Raleway-ExtraBold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-ExtraBold_gdi.woff') format('woff'),
+		url('../fonts/Raleway-ExtraBold_gdi.ttf') format('truetype'),
+		url('../fonts/Raleway-ExtraBold_gdi.svg#Raleway-ExtraBold') format('svg');
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium-webfont.eot');
+    src: url('../fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-medium-webfont.woff') format('woff'),
+         url('../fonts/raleway-medium-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family:'Raleway-Light';
+	src: url('../fonts/Raleway-Light_gdi.eot');
+	src: url('../fonts/Raleway-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Light_gdi.woff') format('woff'),
+		url('../fonts/Raleway-Light_gdi.ttf') format('truetype'),
+		url('../fonts/Raleway-Light_gdi.svg#Raleway-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family:'Raleway-Bold';
+	src: url('../fonts/Raleway-Bold_gdi.eot');
+	src: url('../fonts/Raleway-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Bold_gdi.woff') format('woff'),
+		url('../fonts/Raleway-Bold_gdi.ttf') format('truetype'),
+		url('../fonts/Raleway-Bold_gdi.svg#Raleway-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+FONT DEFINITION ENDS */
+
+/* HTML
+---------------------------------------------------------------------------*/
+
+
+/* BODY 
+---------------------------------------------------------------------------*/
+body {
+	width:100%;
+	margin:0 auto;
+	background-color:#fff;
+}
+
+/* HEADER
+---------------------------------------------------------------------------*/
+.header{
+	border-top: 5px solid #68b4bd;
+	padding: 26px 0 29px 0;
+}
+a.logo{
+	display: inline-block;
+}
+
+/* NAVIGATION
+---------------------------------------------------------------------------*/
+.nav{
+	padding: 36px 0 10px 0;
+	margin-right: 99px;
+}
+.nav li{
+	float: left;
+	margin-left: 36px;
+}
+.nav li a{
+	font-size: 15px;
+    color: #535354;
+    font-weight: 600;
+    display: inline-block;
+    padding: 4px 6px;
+}
+.nav li.active a{
+	border: 2px solid #68b4bd;
+}
+.nav li.active{
+	margin-left: 32px;
+}
+.nav li:first-child{
+	margin-left: 0;
+}
+
+/* PAGE
+---------------------------------------------------------------------------*/
+.section{
+	width: 100%;
+	margin: 0 auto;
+}
+.banner{
+	background: url('../images/banner.jpg') no-repeat center top;
+    background-size: cover;
+    padding: 146px 0 139px 0;
+}
+.banner span{
+	display: block;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0px 3px 5px #111;
+}
+.banner h1{
+	font-family: 'Raleway', Futura, sans-serif;
+	font-weight: 800;
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 0px 3px 5px #111;
+}
+.banner h2{
+	font-family: 'Raleway', Futura, sans-serif;
+	font-weight: 100;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0px 3px 5px #111;
+    background-color: #535354;
+    display: inline-block;
+    font-weight: 100;
+    box-sizing: border-box;
+    padding: 10px 42px;
+    margin: 10px 0 23px 0;
+}
+.banner img{
+	display: block;
+    margin: 0 auto;
+}
+.design{
+	height: 70vh;
+	padding: 30vh 0 0vh 0;
+}
+
+.design .section{
+	
+}
+.design h2{
+	font-weight: 600;
+    font-size: 40px;
+    color: #68b4bd;
+    line-height: 1.25;
+    margin-bottom: 21px;
+}
+.design ul{
+	width: 100%;
+    text-align: center;
+    display: table;
+}
+.design ul li{
+	display: inline-block;
+	margin: 0 27px;
+}
+.openings {
+	background-color: #535354;
+	padding: 30vh 0 0vh 0;
+	height: 70vh;
+}
+.openings p{
+	font-size: 30px;
+    color: #fff;
+    margin-bottom: 4px;
+}
+.openings .btn{
+	background-color: #68b4bd;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    border: none;
+    color: #fff;
+    padding: 7px 36px;
+    margin: 36px 0 0 0;
+}
+
+.secret {
+	display:none;
+}
+
+.application {
+	margin-top: 3vh;
+	border-right: none !important;
+}
+.events{
+	background-color: #68b4bd;
+    padding: 20vh 0 0vh 0;
+    height: 80vh;
+}
+.events h2{
+	font-family: 'Raleway', Futura, sans-serif;
+	font-weight: 700;
+    color: #fff;
+    margin-bottom: 36px;
+}
+
+.event-image {
+	margin-top:10vh;
+}
+.events a.loc{
+	display: inline-block;
+    color: #535354;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    font-weight: 400;
+    border-bottom: 2px solid #fff;
+    line-height: 1.3;
+}
+.events a.loc:hover{
+	border-bottom: 2px solid transparent;
+}
+.events span.date{
+	font-family: 'Raleway', Futura, sans-serif;
+	font-weight: 700;
+    font-size: 27px;
+    color: #fff;
+    margin-left: 155px;
+    position: relative;
+    left: -82px;
+}
+.events span.date small{
+	font-size: 23px;
+    color: #535354;
+}
+.contact-wrap .section > div{
+	width: 49.9%;
+}
+.contact-wrap {
+	padding: 20vh 0 0vh 0;
+	height: 80vh;
+	background: url('../images/star-badge.jpg') no-repeat 0px 81px;
+}
+.contact{
+	border-right: 1px solid #68b4bd;
+	padding-bottom: 26px;
+}
+.contact h2{
+	color: #68b4bd;
+    font-size: 30px;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 300;
+    margin-bottom: 19px;
+    margin-top: 32px;
+}
+.contact form input, .contact form textarea{
+    border: 2px solid #e8e8e8;
+    margin-bottom: 13px;
+    color: #535354;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 4px 10px 5px 10px;
+    box-sizing: border-box;
+    width: 64%;
+}
+.contact form input[type="text"]:focus{
+	color: #535354;
+}
+.contact form textarea{
+	height: 138px;
+    resize: vertical;
+    margin-top: 0px;
+    margin-bottom: 13px;	
+}
+.contact form input::-webkit-input-placeholder , .contact form textarea::-webkit-input-placeholder{
+  color:  #535354;
+}
+.contact form input::-moz-placeholder , .contact form textarea::-moz-placeholder{ /* Firefox 19+ */
+  color:  #535354;
+}
+.contact form input:-ms-input-placeholder, .contact form textarea:-ms-input-placeholder {
+  color:  #535354;
+}
+.contact form input:-moz-placeholder , .contact form textarea:-moz-placeholder{ /* Firefox 18- */
+  color:  #535354;
+}
+.email a{
+	display: inline-block;
+    color: #535354;
+    font-family: 'Raleway', Futura, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.email .mail{
+	background: url('../images/email.png') no-repeat left center;
+    padding-left: 82px;
+}
+.email .tweet{
+	background: url('../images/twitter.png') no-repeat 1px 1px;
+    padding-left: 89px;
+}
+.email p{
+	margin-bottom: 29px;
+}
+.email{
+	padding: 129px 0 0 124px;
+    box-sizing: border-box;
+}
+/* FOOTER
+---------------------------------------------------------------------------*/
+.footer{
+	background-color: #535354;
+    padding: 60px 0 64px 0;
+}
+.footer p{
+	font-family: 'Raleway', Futura, sans-serif;
+	font-weight: 300;
+    font-size: 20px;
+    color: #68b4bd;	
+}
+
+/* FORMS
+---------------------------------------------------------------------------*/
+
+/* PLUGINS
+---------------------------------------------------------------------------*/
+
+
+/* PRINT STYLES
+---------------------------------------------------------------------------*/
+@media print {
+
+}
+
+
+/* MEDIA QUERIES
+---------------------------------------------------------------------------*/
+@media screen and (min-width: 1024px) { 
+.section{
+	width: 1000px;
+	margin: 0 auto;
+}
+}
+@media only screen and (min-width : 1024px) and (max-width : 1200px) {
+.contact{
+	padding-left: 85px;
+    box-sizing: border-box;
+}
+}
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+.nav{
+	margin-right: 5px;
+}	
+.design h2 br{
+	display: none;
+}
+.design h2{
+	padding:0 20px;
+}
+.contact-wrap .section .contact{
+    margin-left: 90px;
+    width: 40%;
+    padding: 0 20px;
+}
+.contact form input, .contact form textarea{
+	width: 100%;
+}
+.contact-wrap .section .email{
+	width: 41.9%;
+	padding: 129px 0 0 14px;
+}
+.email a{
+	font-size: 22px;
+}
+}
+@media screen and (min-width: 300px) and (max-width : 767px){ 
+.design h2 br{
+	display: none;
+}
+.design h2{
+	padding:0;
+	font-size: 25px;    
+}
+.head-wrap{
+	text-align: center;
+}
+a.logo{
+	float: none;
+    text-align: center;
+}
+.nav {
+    margin-right: 0;
+    float: none;
+}
+.nav  ul{
+	width: 100%;
+    display: table;
+    text-align: center;
+}
+.nav  ul li{
+	display: inline-block;
+	float: none;
+}
+.contact-wrap{
+	background: none;
+}
+.contact-wrap .section > div {
+    width: 97%;
+    border-right: none;
+    float: none;
+    margin: 0 auto;
+}
+.email{
+	padding:0;
+}
+.contact form input, .contact form textarea{
+	width: 100%;
+}
+.banner span{
+	font-size: 42px;
+}
+.banner h1{
+	font-size: 48px;
+}
+.banner h2{
+	padding: 10px 12px;
+}
+.design ul li{
+	margin: 0 27px 10px 27px;
+}
+.events span.date{
+	left: 0;
+	margin-left: 0;
+	display: block;
+}
+
+
+.email a{
+	font-size: 21px;
+}
+}
+
+/*# sourceMappingURL=app.css.map*/
