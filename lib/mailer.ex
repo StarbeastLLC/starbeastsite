@@ -1,7 +1,7 @@
 defmodule Starbeast.Mailer do
 
 	@from "postmaster@sandbox9ddf700296ad4bf0a817cedfe2a09d99.mailgun.org"
-	@to "guerrazuramx@gmail.com"
+	@to "info@starbeast.com"
 
 	use Mailgun.Client, 
 		domain: Application.get_env(:starbeast, :mailgun_domain),
