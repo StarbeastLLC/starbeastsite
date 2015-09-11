@@ -351,8 +351,10 @@ a.logo{
     margin: 0 auto;
 }
 .design{
-	height: 70vh;
-	padding: 30vh 0 0vh 0;
+	/*height: 70vh;
+	padding: 30vh 0 0vh 0;*/
+	height: 100%;
+	padding: 18% 0;
 }
 
 .design .section{
@@ -376,8 +378,10 @@ a.logo{
 }
 .openings {
 	background-color: #535354;
-	padding: 30vh 0 0vh 0;
-	height: 70vh;
+	/*padding: 30vh 0 0vh 0;
+	height: 70vh;*/
+	height: 100%;
+	padding: 22% 0;
 }
 .openings p{
 	font-size: 30px;
@@ -405,8 +409,10 @@ a.logo{
 }
 .events{
 	background-color: #68b4bd;
-    padding: 20vh 0 0vh 0;
-    height: 80vh;
+    /*padding: 20vh 0 0vh 0;
+    height: 80vh;*/
+    height: 100%;
+	padding: 12% 0;
 }
 .events h2{
 	font-family: 'Raleway', Futura, sans-serif;
@@ -416,7 +422,7 @@ a.logo{
 }
 
 .event-image {
-	margin-top:10vh;
+	margin-top:10%;
 }
 .events a.loc{
 	display: inline-block;
@@ -448,8 +454,10 @@ a.logo{
 	width: 49.9%;
 }
 .contact-wrap {
-	padding: 20vh 0 0vh 0;
-	height: 80vh;
+	/*padding: 20vh 0 0vh 0;
+	height: 80vh;*/
+	height: 100%;
+	padding: 12% 0;
 	background: url('../images/star-badge.jpg') no-repeat 0px 81px;
 }
 .contact{
