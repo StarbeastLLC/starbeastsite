@@ -29,7 +29,11 @@
             <%= textarea :application_form, :message, placeholder: "A brief description about yourself and links to your awesome work (Github, Dribble...)", required: true %>
             <%= submit "SEND" %>
 
+            <button type="button" class="hide-form">NOT NOW</button>
+
           <% end %>
+
+
         </div>
     </div>
   </div>

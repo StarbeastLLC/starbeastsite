@@ -46,10 +46,17 @@ $(document).ready(function(){
 			'slow');
 	});
 
-	// Make Apply form visible
+	//Make Apply form visible
 	$(".apply").click(function() {
 		$(".application").removeClass("secret");
 		$(".apply").addClass("secret");
+	});
+
+	// Hide Apply form again
+	$(".hide-form").click(function() {
+		console.log("hjkhkjhkjh");
+		$(".application").addClass("secret");
+		$(".apply").removeClass("secret");
 	});
 	
 });
