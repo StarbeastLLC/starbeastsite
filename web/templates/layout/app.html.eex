@@ -31,7 +31,7 @@
           <!--<li><a href="#">BLOG</a></li>-->
           <li class="jobs-scroll"><a>JOBS</a></li>
           <li class="events-scroll"><a>EVENTS</a></li>
-          <li class="active contact-scroll"><a>CONTACT</a></li>
+          <li class="contact-scroll"><a>CONTACT</a></li>
         </ul>
       </nav>
     </div>

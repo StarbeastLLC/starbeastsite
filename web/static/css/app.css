@@ -296,7 +296,15 @@ a.logo{
     font-weight: 600;
     display: inline-block;
     padding: 4px 6px;
+    cursor:pointer;
 }
+.nav li a:hover {
+	border: 2px solid #68b4bd;
+	margin-top: -1px;
+	margin-left: -2px;
+	margin-right: -2px;
+}
+
 .nav li.active a{
 	border: 2px solid #68b4bd;
 }
