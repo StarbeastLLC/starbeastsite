@@ -36,6 +36,6 @@ defmodule Starbeast.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:mailgun, "~> 0.1.1"},
-     {:exrm, "~> 0.18.6"}]
+     {:exrm, "~> 0.19.6"}]
   end
 end
