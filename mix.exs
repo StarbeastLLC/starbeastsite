@@ -18,7 +18,7 @@ defmodule Starbeast.Mixfile do
   def application do
     [mod: {Starbeast, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :mailgun]]
   end
 
   # Specifies which paths to compile per environment
